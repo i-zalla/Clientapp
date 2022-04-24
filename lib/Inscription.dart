@@ -304,7 +304,7 @@ class _InscriptionState extends State<Inscription>{
                                             Navigator.push(
                                                 context,
                                                 MaterialPageRoute(
-                                                    builder: (context) => Home()
+                                                    builder: (context) => Verification()
                                                 )
                                             );
                                           },
@@ -331,7 +331,7 @@ class _InscriptionState extends State<Inscription>{
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder:(context) => Verification()
+                                                builder:(context) => Login()
                                             )
                                         );
                                       },
@@ -363,4 +363,5 @@ class _InscriptionState extends State<Inscription>{
         )
     );
   }
+
 }
