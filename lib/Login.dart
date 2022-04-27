@@ -124,13 +124,33 @@ class _LoginState extends State<Login>{
                                           crossAxisAlignment: CrossAxisAlignment.end,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsets.fromLTRB(5.w, 20.h, 5.w, 5.h),
+                                              padding: EdgeInsets.fromLTRB(5.w, 20.h, 5.w, 20.h),
                                               child: Container(
                                                 height: 50.h,
                                                 width: 288.w,
                                                 color: Colors.transparent,
                                                 child: TextFormField(
                                                   decoration: InputDecoration(
+                                                    suffix: Padding(
+                                                      padding:  EdgeInsets.symmetric(horizontal: 0),
+                                                      child: TextButton(
+                                                        onPressed: (){
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                  builder: (context) => Login()
+                                                              )
+                                                          );
+                                                        },
+                                                        child: Text(
+                                                          'Envoyer',
+                                                          style: TextStyle(
+                                                            color: Color(0xffF54749),
+                                                            fontSize: 14.sp,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
                                                     enabledBorder: OutlineInputBorder(
                                                       borderSide: BorderSide(
                                                         color: Color(0xffF54749),
@@ -159,7 +179,28 @@ class _LoginState extends State<Login>{
                                                 ),
                                               ),
                                             ),
-                                            Padding(
+                                            Container(
+                                              padding: EdgeInsets.fromLTRB(50, 20, 50,0),
+                                              decoration: BoxDecoration(
+                                                color: Colors.transparent,
+                                              ),
+                                              width: 350,
+                                              height: 150,
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                    children: [
+                                                      _textFieldOTP(first: true, last: false),
+                                                      _textFieldOTP(first: false, last: false),
+                                                      _textFieldOTP(first: false, last: false),
+                                                      _textFieldOTP(first: false, last: true),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                           /* Padding(
                                                 padding: EdgeInsets.fromLTRB(5.w, 20.h, 5.w, 0.h),
                                               child: Container(
                                                 height: 50.h,
@@ -208,8 +249,8 @@ class _LoginState extends State<Login>{
                                                   textInputAction: TextInputAction.done,
                                                   ),
                                                 ),
-                                              ),
-                                            TextButton(
+                                              ),*/
+                                           /* TextButton(
                                                 onPressed: (){
                                                   Navigator.push(
                                                       context,
@@ -227,11 +268,11 @@ class _LoginState extends State<Login>{
                                                       TextDecoration.underline,
                                                   ),
                                                 )
-                                            )
+                                            )*/
                                           ],
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.fromLTRB(50.w, 70.h, 50.w, 10.h),
+                                          padding: EdgeInsets.fromLTRB(50.w, 20.h, 50.w, 10.h),
                                           child: Container(
                                           color: Colors.transparent,
                                           child: SizedBox(
@@ -302,6 +343,51 @@ class _LoginState extends State<Login>{
             ]
 
     ) );
+  }
+  Widget _textFieldOTP({bool? first, last}) {
+    return Container(
+      height: 45,
+      width: 40,
+      child: AspectRatio(
+        aspectRatio: 1.0,
+        child: TextField(
+          autofocus: true,
+          onChanged: (value) {
+            if (value.length == 1 && last == false) {
+              FocusScope.of(context).nextFocus();
+            }
+            if (value.length == 0 && first == false) {
+              FocusScope.of(context).previousFocus();
+            }
+          },
+          showCursor: true,
+          readOnly: false,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 18,
+          ),
+          keyboardType: TextInputType.number,
+          maxLength: 1,
+          decoration: InputDecoration(
+            counter: Offstage(),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2,
+                    color: Colors.black12
+                ),
+                borderRadius: BorderRadius.circular(5)
+            ),
+            focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                    width: 2,
+                    color: Color(0xffF54749)
+                ),
+                borderRadius: BorderRadius.circular(5)
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
 }

@@ -151,23 +151,6 @@ class _Recuperation1 extends State<Recuperation1>{
                                           ),
                                         ),
                                       ),
-                                      /*IconButton(
-                                        padding: EdgeInsets.fromLTRB(0, 10, 0, 15),
-                                       // alignment: Alignment(-1,0),
-                                          onPressed: (){
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder:(context) => Recuperation1()
-                                                )
-                                            );
-                                          },
-                                          icon: Icon(
-                                            Icons.arrow_forward,
-                                            size: 35,
-                                            color: Color(0xffF54749),
-                                          )
-                                      ),*/
                                       Container(
                                         padding: EdgeInsets.fromLTRB(50, 10, 50,0),
                                         decoration: BoxDecoration(
