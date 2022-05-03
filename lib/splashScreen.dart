@@ -1,3 +1,4 @@
+import 'package:clientapp/Home.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'main.dart';
@@ -5,6 +6,7 @@ import 'dart:async';
 import 'package:clientapp/main.dart';
 import 'package:clientapp/Login.dart';
 import 'package:clientapp/Onboarding.dart';
+import 'package:clientapp/try.dart';
 
 
 
@@ -18,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(milliseconds: 4500),
+        Duration(milliseconds: 6000),
             () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => OnBoarding()
             )

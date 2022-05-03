@@ -110,7 +110,7 @@ class _onBoarding extends State<OnBoarding>{
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Padding(
+                         /* Padding(
                             padding: EdgeInsets.fromLTRB(60, 5, 60, 10),
                             child: Container(
                               color: Colors.transparent,
@@ -143,7 +143,7 @@ class _onBoarding extends State<OnBoarding>{
                                 ),
                               ),
                             ),
-                          ),
+                          ),*/
 
                           Padding(
                             padding: EdgeInsets.fromLTRB(60, 10, 60, 0),

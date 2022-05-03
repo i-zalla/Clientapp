@@ -211,11 +211,11 @@ class _InscriptionState extends State<Inscription>{
                                         ),
                                       ),
                                       Container(
-                                        padding: EdgeInsets.fromLTRB(50, 20, 50,0),
+                                        padding: EdgeInsets.fromLTRB(10, 20, 10,0),
                                         decoration: BoxDecoration(
                                           color: Colors.transparent,
                                         ),
-                                        width: 350,
+                                        width: 358,
                                         height: 100,
                                         child: Column(
                                           children: [
@@ -223,6 +223,8 @@ class _InscriptionState extends State<Inscription>{
                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 _textFieldOTP(first: true, last: false),
+                                                _textFieldOTP(first: false, last: false),
+                                                _textFieldOTP(first: false, last: false),
                                                 _textFieldOTP(first: false, last: false),
                                                 _textFieldOTP(first: false, last: false),
                                                 _textFieldOTP(first: false, last: true),
