@@ -1,13 +1,13 @@
 import 'package:clientapp/Home.dart';
 import 'package:clientapp/Login.dart';
 import 'package:clientapp/Model/slide.dart';
+import 'package:clientapp/Page.dart';
 import 'package:clientapp/Widgets/SlideItems.dart';
 import 'package:clientapp/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/slidedots.dart';
 import 'dart:async';
-import 'package:clientapp/Inscription.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoarding extends StatefulWidget{
@@ -206,7 +206,7 @@ class _onBoarding extends State<OnBoarding>{
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Home()
+                                        builder: (context) => Main_Page()
                                     )
                                 );
                               },

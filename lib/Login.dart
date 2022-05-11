@@ -1,23 +1,16 @@
-import 'package:clientapp/main.dart';
-import 'package:clientapp/splashScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:clientapp/Recuperation1.dart';
-import 'package:clientapp/Home.dart';
-import 'package:clientapp/Inscription.dart';
 
+import 'package:clientapp/Home.dart';
 class Login extends StatefulWidget {
   const Login ({Key? key}): super(key : key);
-
   @override
   _LoginState createState() => _LoginState();
 }
-
 class _LoginState extends State<Login>{
   bool _secureText = true;
-
   @override
   Widget build(BuildContext context){
     return SafeArea(
@@ -27,13 +20,12 @@ class _LoginState extends State<Login>{
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      'images/BG.png'
+                        'images/BG.png'
                     ),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-
               Scaffold(
                 backgroundColor: Colors.transparent,
                 body: SingleChildScrollView(
@@ -42,56 +34,64 @@ class _LoginState extends State<Login>{
                       children: [
                         Column(
                           children: [
-                            Container(
-                              alignment: Alignment(38,0),
-                              width: 110.w,
-                              height: 60.h,
-                              padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
-                              child: OutlinedButton(
-                                child: Text(
-                                  "Découvrir",
-                                  style: TextStyle(
-                                      fontSize: 18.sp,
-                                      color: Color(0xffF54749),
-                                  ),
-                                ),
-                                style: OutlinedButton.styleFrom(
-                                    side: BorderSide(
-                                      color: Color(0xffF54749),
-                                      width: 3,
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(30)
-                                    )
-                                ),
-
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Home()
-                                      )
-                                  );
-                                },
-                              ),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.fromLTRB(50.w, 0.h, 0.w, 0.h),
-                                child: Container(
-                                  height: 170.h,
-                                  width: 360.w,
-                                  child: Center(
-                                    child:Container(
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                'images/man.png',
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Column(
+                                  children: [
+                                    SizedBox(height: 10.h,),
+                                    Container(
+                                      width: 110.w,
+                                      height:40.h,
+                                      child: OutlinedButton(
+                                        child: Text(
+                                          "Découvrir",
+                                          style: TextStyle(
+                                            fontSize: 18.sp,
+                                            color: Color(0xffF54749),
+                                          ),
+                                        ),
+                                        style: OutlinedButton.styleFrom(
+                                            side: BorderSide(
+                                              color: Color(0xffF54749),
+                                              width: 3,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(30)
+                                            )
+                                        ),
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => Home()
                                               )
-                                          )
+                                          );
+                                        },
                                       ),
                                     ),
+                                  ],
+                                ),
+                                SizedBox(width: 10.w,),
+                              ],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(50.w, 0.h, 0.w, 0.h),
+                              child: Container(
+                                height: 170.h,
+                                width: 360.w,
+                                child: Center(
+                                  child:Container(
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                              'images/man.png',
+                                            )
+                                        )
+                                    ),
                                   ),
                                 ),
+                              ),
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(50.w, 0.h, 50.w, 0.h),
@@ -99,18 +99,18 @@ class _LoginState extends State<Login>{
                                 height: 80.h,
                                 width: 360.w,
                                 child: Center(
-                                    child :Text(
-                                      'Connexion',
-                                      textScaleFactor: 0.96.sp,
-                                      style: TextStyle(
+                                  child :Text(
+                                    'Connexion',
+                                    textScaleFactor: 0.96.sp,
+                                    style: TextStyle(
                                         fontFamily: 'poppins',
                                         fontSize: 40.sp,
                                         color: Colors.black
-                                      ),
                                     ),
                                   ),
                                 ),
                               ),
+                            ),
                             Container(
                               width: 340.w,
                               height: 400.h,
@@ -152,24 +152,24 @@ class _LoginState extends State<Login>{
                                                       ),
                                                     ),
                                                     enabledBorder: OutlineInputBorder(
-                                                      borderSide: BorderSide(
-                                                        color: Color(0xffF54749),
-                                                        width: 2.5
-                                                      ),
-                                                      borderRadius: BorderRadius.circular(5)
+                                                        borderSide: BorderSide(
+                                                            color: Color(0xffF54749),
+                                                            width: 2.5
+                                                        ),
+                                                        borderRadius: BorderRadius.circular(5)
                                                     ),
                                                     focusedBorder: OutlineInputBorder(
-                                                      borderSide: BorderSide(
-                                                        color: Color(0xffF54749),
-                                                        width: 2.5
-                                                      ),
-                                                      borderRadius: BorderRadius.circular(5)
+                                                        borderSide: BorderSide(
+                                                            color: Color(0xffF54749),
+                                                            width: 2.5
+                                                        ),
+                                                        borderRadius: BorderRadius.circular(5)
                                                     ),
                                                     labelText: 'Numéro de télephone',
                                                     labelStyle: TextStyle(
-                                                      color: Color(0xffa7a7a7),
-                                                      fontSize: 16.sp,
-                                                      fontFamily: 'poppins'
+                                                        color: Color(0xffa7a7a7),
+                                                        fontSize: 16.sp,
+                                                        fontFamily: 'poppins'
                                                     ),
                                                     filled: true,
                                                     fillColor: Colors.transparent,
@@ -202,7 +202,7 @@ class _LoginState extends State<Login>{
                                                 ],
                                               ),
                                             )
-                                           /* Padding(
+                                            /* Padding(
                                                 padding: EdgeInsets.fromLTRB(5.w, 20.h, 5.w, 0.h),
                                               child: Container(
                                                 height: 50.h,
@@ -211,7 +211,9 @@ class _LoginState extends State<Login>{
                                                 child: TextFormField(
                                                   decoration: InputDecoration(
                                                     enabledBorder: OutlineInputBorder(
-                                                        borderSide: BorderSide(
+
+Yasmine, [11/05/2022 20:17]
+borderSide: BorderSide(
                                                             color: Color(0xffF54749),
                                                             width: 2.5
                                                         ),
@@ -252,7 +254,7 @@ class _LoginState extends State<Login>{
                                                   ),
                                                 ),
                                               ),*/
-                                           /* TextButton(
+                                            /* TextButton(
                                                 onPressed: (){
                                                   Navigator.push(
                                                       context,
@@ -276,38 +278,38 @@ class _LoginState extends State<Login>{
                                         Padding(
                                           padding: EdgeInsets.fromLTRB(50.w, 20.h, 50.w, 10.h),
                                           child: Container(
-                                          color: Colors.transparent,
-                                          child: SizedBox(
-                                            width: 195.w,
-                                            height: 42.h,
-                                            child: ElevatedButton(
-                                              onPressed: (){
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) => Home()
-                                                    )
-                                                );
-                                              },
-                                              child: Text(
-                                                'Connexion',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18.sp,
+                                            color: Colors.transparent,
+                                            child: SizedBox(
+                                              width: 195.w,
+                                              height: 42.h,
+                                              child: ElevatedButton(
+                                                onPressed: (){
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) => Home()
+                                                      )
+                                                  );
+                                                },
+                                                child: Text(
+                                                  'Connexion',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18.sp,
+                                                  ),
                                                 ),
-                                              ),
-                                              style: ElevatedButton.styleFrom(
-                                                shadowColor: Colors.grey,
-                                                primary: Color(0xffF54749),
-                                                  shape: RoundedRectangleBorder(
-                                                    borderRadius: BorderRadius.circular(5),
-                                                  )
+                                                style: ElevatedButton.styleFrom(
+                                                    shadowColor: Colors.grey,
+                                                    primary: Color(0xffF54749),
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.circular(5),
+                                                    )
+                                                ),
                                               ),
                                             ),
                                           ),
-                                          ),
                                         ),
-                                       /* TextButton(
+                                        /* TextButton(
                                             onPressed: (){
                                               Navigator.push(
                                                   context,
@@ -327,7 +329,6 @@ class _LoginState extends State<Login>{
                                               ),
                                             )
                                         )*/
-
                                       ],
                                     ),
                                   ),
@@ -343,8 +344,7 @@ class _LoginState extends State<Login>{
                 ),
               )
             ]
-
-    ) );
+        ) );
   }
   Widget _textFieldOTP({bool? first, last}) {
     return Container(
@@ -391,5 +391,4 @@ class _LoginState extends State<Login>{
       ),
     );
   }
-
 }
